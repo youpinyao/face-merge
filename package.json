@@ -1,0 +1,19 @@
+{
+  "name": "face-merge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youpinyao/face-merge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youpinyao/face-merge/issues"
+  },
+  "homepage": "https://github.com/youpinyao/face-merge#readme"
+}

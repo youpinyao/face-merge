@@ -24,7 +24,6 @@ app.get('/merge', function (req, res) {
       'Content-Type': 'text/json',
       'Authorization': sign,
     },
-    // body: require('./demo'),
     body: {
       "app_id": AppID,
       // "project": "youtu",

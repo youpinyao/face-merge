@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/youpinyao/face-merge/issues"
   },
-  "homepage": "https://github.com/youpinyao/face-merge#readme"
+  "homepage": "https://github.com/youpinyao/face-merge#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "js-base64": "^2.4.5",
+    "nodemon": "^1.17.5",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2",
+    "sha1": "^1.1.1"
+  }
 }

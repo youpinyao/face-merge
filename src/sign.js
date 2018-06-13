@@ -1,6 +1,5 @@
-const sha1 = require('sha1');
+const crypto = require('crypto');
 const fs = require('fs');
-const base64_encode = require('js-base64').Base64.encode;
 
 const {
   qq,
@@ -9,7 +8,7 @@ const {
   SecretKey,
 } = require('./config');
 
-const space = (60 * 60 * 1);
+const space = (60 * 60 * 24);
 const cachePath = 'sign.json';
 
 let t = null;
@@ -23,7 +22,7 @@ if (fs.existsSync(cachePath)) {
   t = cache.t;
   e = cache.e;
   r = cache.r;
-  original = cache.original;
+  original = new Buffer(cache.original);
 } else {
   generate();
 }
@@ -32,7 +31,9 @@ function generate() {
   t = parseInt(+(new Date()) / 1000);
   e = t + space;
   r = parseInt(Math.random() * 10000000000);
-  original = `u=${qq}&a=${AppID}&k=${SecretID}&e=${e}&t=${t}&r=${r}&f=`;
+  const originalStr = `a=${AppID}&k=${SecretID}&e=${e}&t=${t}&r=${r}&u=${qq}`;
+
+  original = new Buffer(originalStr);
 
   console.log('====================================');
   console.log('sign generate');
@@ -42,7 +43,7 @@ function generate() {
     t,
     e,
     r,
-    original,
+    original: originalStr,
   }));
 }
 
@@ -52,7 +53,7 @@ module.exports = function () {
     generate();
   }
 
-  const sign = base64_encode(sha1(original));
+  const sign = crypto.createHmac('sha1', SecretKey).update(original).digest();
 
-  return sign;
+  return (Buffer.concat([sign, original])).toString('base64');
 }

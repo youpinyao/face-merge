@@ -1,6 +1,6 @@
 module.exports = {
   qq: '497400448',
-  AppID: '10135814',
-  SecretID: 'AKIDyTAHXaaJm5970zq2V7czT5nZD0raDWm7',
-  SecretKey: 'M9ohhpneMC7bVyscBbwOix41154tWyNB',
+  AppID: '10136654',
+  SecretID: 'AKID31gEetIxlNqDPTlSo13uZ9ZvPoBPuNJ4',
+  SecretKey: 'lLkzJVbXKvqcIME1mPq59pQ7JQUP8h4u',
 }

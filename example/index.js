@@ -29,7 +29,7 @@ $('#merge').bind('click', e => {
     alert('请选择图片');
     return;
   }
-
+  $('#box').html('生成中....');
   $.post({
     url: '/merge',
     contentType: 'text/json',

@@ -17,11 +17,14 @@
   },
   "homepage": "https://github.com/youpinyao/face-merge#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "byte-length": "^1.0.2",
     "express": "^4.16.3",
     "nodemon": "^1.17.5",
     "request": "^2.87.0",
-    "request-promise": "^4.2.2",
-    "sha1": "^1.1.1"
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "jquery": "^3.3.1"
   }
 }

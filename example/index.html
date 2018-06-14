@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>face merge</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="edit">
+    <input type="file" id="file" accept="image/jpeg,image/jpg,image/png" />
+    <button id="merge">生成</button>
+  </div>
+
+  <div id="box" style="padding: 20px;"></div>
+
+  <div id="templates"></div>
+
+  <code style="white-space: pre;">
+      错误码	说明
+      SUCCESS = 0	成功
+      RET_NOFACE = 1000	无人脸
+      RET_PARAM_INVALID = -1000	参数错误
+      RET_PARAM_INVALID = -1001	图像处理错误
+      RET_CKV_FAILED = - 1002	读写CKV出错
+      RET_REDIS_FAILED = - 1003	读写REDIS出错
+      RET_SAVEIMAGE_FAILED = - 1004	保存结果图片出错
+      RET_DOWNLOADIMAGE_FAILED = -1005	下载用户图片出错
+      RET_PROCESSLOGIC_FAILED = -1007	服务器内部逻辑出错
+      RET_FACEDETECT_FAILED = - 1008	人脸检测失败
+      RET_REQ_DECODE_FAILED = - 1009	参数拼接不规范
+      RET_OUT_FREQUENCY = - 2011~2015	访问频率超出限制
+      RET_OPEN_NOT_EXIST_CMD = - 2102	图片操作功能不存在
+      RET_OPEN_CMD_FORBIDDEN = - 2103	图片操作功能无权限
+      RET_OPEN_AUTH_FAILED = -2101 ~ -2093	接口调用鉴权失败
+      RET_OPEN_AUTH_FAILED = -2093	命令字权限错误
+      RET_OPEN_AUTH_FAILED = -2094	签名不匹配
+      RET_OPEN_AUTH_FAILED = -2095	secret id 不匹配
+      RET_OPEN_AUTH_FAILED = -2096	查询appid对应信息失败
+      RET_OPEN_AUTH_FAILED = -2097	签名过期
+      RET_OPEN_AUTH_FAILED = -2098	original字段获取失败
+      RET_OPEN_AUTH_FAILED = -2099	签名无效
+      RET_OPEN_AUTH_FAILED = -2100	http头错误
+      RET_OPEN_NOT_EXIST_CMD = -2102	图片处理功能不存在
+      RET_OPEN_CMD_FORBIDDEN = -2103	图片操作功能无权限
+  </code>
+  <script src="../jquery/dist/jquery.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>

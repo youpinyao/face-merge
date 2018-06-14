@@ -1,0 +1,27 @@
+#templates label {
+  display: inline-block;
+  border: 1px solid #000;
+  vertical-align: top;
+  text-align: center;
+  padding: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#templates label input {
+  display: none;
+}
+
+#templates label img {
+  width: 50px;
+  height: auto;
+}
+
+#templates label input:checked + div > img {
+  border: 2px solid red;
+}
+
+
+.edit {
+  padding: 10px 0;
+}

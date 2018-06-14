@@ -13,7 +13,7 @@ const {
   SecretKey,
 } = require('./config');
 
-app.use(logger('dev'));
+app.use(logger('common'));
 app.use(bodyParser.urlencoded({
   extended: false,
 }));

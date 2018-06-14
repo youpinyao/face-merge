@@ -12,7 +12,9 @@ const {
   SecretKey,
 } = require('./config');
 
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({
+  extended: false,
+}));
 app.use(bodyParser.json());
 app.use('/example', express.static('example'));
 app.use('/jquery', express.static('node_modules/jquery'));

@@ -3,6 +3,7 @@ const byteLength = require('byte-length').byteLength;
 const express = require('express');
 const request = require('request-promise');
 const bodyParser = require('body-parser');
+var logger = require('morgan');
 const app = express();
 
 const {
@@ -12,6 +13,7 @@ const {
   SecretKey,
 } = require('./config');
 
+app.use(logger('dev'));
 app.use(bodyParser.urlencoded({
   extended: false,
 }));

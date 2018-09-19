@@ -31,12 +31,11 @@ $('#merge').bind('click', e => {
   }
   $('#box').html('生成中....');
   $.post({
-    url: '/merge',
-    contentType: 'text/json',
-    data: JSON.stringify({
+    url: 'https://xcx.leborn.cn/egg/face/merge',
+    data: {
       img_data: file,
       model_id: $('input[name="template"]:checked').val(),
-    }),
+    },
   }).then(res => {
     if (res.ret == 0) {
       $('#box').html(`
